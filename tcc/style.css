@@ -25,7 +25,7 @@ section::before {
   width: 100%;
   height: 100%;
   background: linear-gradient(120deg, #f86086, #fe8d77 80%);
-  clip-path: circle(30% at right 70%);
+  clip-path: circle(25% at right 55%);
 }
 
 section::after {
@@ -42,10 +42,8 @@ section::after {
 .container {
   position: relative;
   z-index: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   margin: 20px 20px;
 }
 
@@ -138,52 +136,14 @@ section::after {
   font-size: 24px;
 }
 
-.heart {
-  width: 50px;
-  margin-bottom: 20px;
-  animation: heartBeat 1s ease-in-out infinite;
-}
-
-@keyframes heartBeat {
-  0% {
-    transform: scale(0.9);
-  }
-
-  45% {
-    transform: scale(1.1);
-  }
-
-  70% {
-    transform: scale(0.9);
-  }
-
-  100% {
-    transform: scale(0.9);
+@media only screen and (max-width: 1200px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-.time {
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.time h2,
-.time p {
-  margin: 0;
-  margin-bottom: 4px;
-}
-
-.time h2 {
-  font-size: 2.4rem;
-}
-
-.time p {
-  font-size: 1.5rem;
-}
-
-.sup-time {
-  font-weight: 300;
+@media only screen and (max-width: 768px) {
+  .container {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
