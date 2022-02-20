@@ -21,8 +21,8 @@ section::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(#f00, #f0f);
-  clip-path: circle(30% at right 70%);
+  background: linear-gradient(120deg, #f86086, #fe8d77 80%);
+  clip-path: circle(25% at right 55%);
 }
 
 section::after {
@@ -32,7 +32,7 @@ section::after {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(#2196f3, #e91e63);
+  background: linear-gradient(120deg, #1dc8e7, #20e6b9 30%);
   clip-path: circle(20% at 10% 10%);
 }
 
@@ -183,4 +183,9 @@ section::after {
 
 .sup-time {
   font-weight: 300;
+}
+
+.ending {
+  color: #fff;
+  text-align: center;
 }
